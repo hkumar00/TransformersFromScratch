@@ -11,9 +11,9 @@ graph TD;
     B -->|C| TokenEmbeddings;
     C -->|D| PositionalEncoding;
     D -->|E| Multi-HeadAttention;
-    E -->|F| Layer Norm&Residual;
-    F -->|G| Feed-ForwardLayer;
-    G -->|H| Layer Norm&Residual;
+    E -->|F| LayerNormAndResidual;
+    F -->|G| FeedForwardLayer;
+    G -->|H| LayerNormAndResidual;
     H -->|I| Softmax(OutputProbabilities);
 ```
 
