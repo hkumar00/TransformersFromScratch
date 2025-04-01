@@ -5,7 +5,17 @@ This project implements a GPT2-style Transformer model from scratch using PyTorc
 
 ## Architecture
 
-```+----------------------+ | Input Text | +----------------------+ | v +----------------------+ | Tokenization | +----------------------+ | v +----------------------+ | Token Embeddings | +----------------------+ | v +----------------------+ | Positional Encoding | +----------------------+ | v +----------------------------+ | Transformer Blocks | (Repeated L times) | +----------------------+ | | | Multi-Head Attention | | | +----------------------+ | | | Layer Norm & Residual | | | +----------------------+ | | | Feed-Forward Layer | | | +----------------------+ | | | Layer Norm & Residual | | | +----------------------+ | +----------------------------+ | v +----------------------+ | Softmax | | (Output Probabilities) | +----------------------+```
+```mermaid
+graph TD;
+    A[Input Text] --> B[Tokenization];
+    B --> C[Token Embeddings];
+    C --> D[Positional Encoding];
+    D --> E[Multi-Head Attention];
+    E --> F[Layer Norm & Residual];
+    F --> G[Feed-Forward Layer];
+    G --> H[Layer Norm & Residual];
+    H --> I[Softmax (Output Probabilities)];
+```
 
 The model follows a standard GPT-like Transformer architecture with the following components:
 
