@@ -22,7 +22,7 @@ The model follows a standard GPT-like Transformer architecture with the followin
 ## Installation
 Ensure you have the required dependencies installed:
 ```bash
-pip install torch tiktoken
+pip install -r Requirements.txt
 ```
 
 ## Usage
