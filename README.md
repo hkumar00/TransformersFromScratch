@@ -7,7 +7,7 @@ This project implements a GPT2-style Transformer model from scratch using PyTorc
 
 ```mermaid
 graph TD;
-    A|Input Text| --> |B|Tokenization;
+    |A|Input Text --> |B|Tokenization;
     B --> |C|Token Embeddings;
     C --> |D|Positional Encoding;
     D --> |E|Multi-Head Attention;
