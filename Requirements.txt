@@ -1,0 +1,10 @@
+torch
+tiktoken
+matplotlib
+seaborn
+tensorflow
+tqdm
+numpy
+pandas
+pandas
+psutil
