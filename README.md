@@ -4,6 +4,15 @@
 This project implements a GPT2-style Transformer model from scratch using PyTorch. The model is designed for text generation and follows the core principles of the original Transformer architecture, including multi-head self-attention and positional embeddings.
 
 ## Architecture
+The model follows a standard GPT-like Transformer architecture with the following components:
+
+- **Token Embedding Layer**: Maps input tokens to dense vector representations.
+- **Positional Embeddings**: Encodes position information since the Transformer lacks inherent sequence order.
+- **Multi-Head Self-Attention**: Computes attention across different token positions for contextual understanding.
+- **Feed-Forward Layers**: Applies non-linearity and transformations after attention mechanisms.
+- **Layer Normalization and Residual Connections**: Helps in stabilizing training and preserving gradient flow.
+- **Decoder-Only Architecture**: Uses causal masking to prevent future token leakage during training.
+
 
 ```mermaid
 graph TD;
@@ -16,15 +25,6 @@ graph TD;
     G -->|LayerNormAndResidual| H;
     H -->|Softmax| I;
 ```
-
-The model follows a standard GPT-like Transformer architecture with the following components:
-
-- **Token Embedding Layer**: Maps input tokens to dense vector representations.
-- **Positional Embeddings**: Encodes position information since the Transformer lacks inherent sequence order.
-- **Multi-Head Self-Attention**: Computes attention across different token positions for contextual understanding.
-- **Feed-Forward Layers**: Applies non-linearity and transformations after attention mechanisms.
-- **Layer Normalization and Residual Connections**: Helps in stabilizing training and preserving gradient flow.
-- **Decoder-Only Architecture**: Uses causal masking to prevent future token leakage during training.
 
 ## Implementation Details
 - The model parameters are defined using a configuration dictionary.
