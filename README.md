@@ -7,14 +7,14 @@ This project implements a GPT2-style Transformer model from scratch using PyTorc
 
 ```mermaid
 graph TD;
-    InputText -->|B| Tokenization;
-    B -->|C| TokenEmbeddings;
-    C -->|D| PositionalEncoding;
-    D -->|E| Multi-HeadAttention;
-    E -->|F| LayerNormAndResidual;
-    F -->|G| FeedForwardLayer;
-    G -->|H| LayerNormAndResidual;
-    H -->|I| Softmax(OutputProbabilities);
+    InputText -->|Tokenization| B;
+    B -->|TokenEmbeddings| C;
+    C -->|PositionalEncoding| D;
+    D -->|MultiHeadAttention| E;
+    E -->|LayerNormAndResidual| F;
+    F -->|FeedForwardLayer| G;
+    G -->|LayerNormAndResidual| H;
+    H -->|Softmax(OutputProbabilities)| I;
 ```
 
 The model follows a standard GPT-like Transformer architecture with the following components:
