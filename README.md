@@ -14,8 +14,7 @@ graph TD;
     E --> F[Layer Norm & Residual];
     F --> G[Feed-Forward Layer];
     G --> H[Layer Norm & Residual];
-    H --> I[Softmax (Output Probabilities)];
-```
+    H --> I[Softmax (Output Probabilities)];```
 
 The model follows a standard GPT-like Transformer architecture with the following components:
 
